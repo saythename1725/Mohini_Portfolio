@@ -5,5 +5,6 @@ This is a website for all my projects
 * Perforemd EDA and gathered information about the types of houses in different cities along with extracting features from the dataset
 * Implemented multiple and polynomial linear regression
 * compared the different models
-* Implemented KNN regression
+*  Implemented KNN regression
+
 ![](/images/download.png)
