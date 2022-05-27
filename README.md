@@ -8,3 +8,6 @@ This is a website for all my projects
 *  Implemented KNN regression
 
 ![](/images/download.png)
+
+# [Project 1: House Price prediction: Project overview](https://public.tableau.com/app/profile/mohini1780/viz/RegisteredCompaniesofIndiaintheyear2021/Dashboard1)
+![](/images/Dashboard%201.png)
