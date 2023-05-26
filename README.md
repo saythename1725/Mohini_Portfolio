@@ -8,12 +8,12 @@ This is a website for all my projects
 * Compared different models.
 * Implemented KNN regression.
 
-<img src="images/download.png" alt="House Price Prediction" width="500" height="300">
+<img src="images/download.png" alt="House Price Prediction" width="800" height="300">
 
 ## [Multiple Disease Prediction System](https://github.com/saythename1725/code.py)
 * Built a web app for various diseases using different machine learning models and deployed it using the Streamlit server.
 
-<img src="images/web-screenshot-26-05-2023.jpg" alt="Multiple Disease Prediction System" width="500" height="300">
+<img src="images/web-screenshot-26-05-2023.jpg" alt="Multiple Disease Prediction System" width="800" height="300">
 
 ##[Ken's Youtube Dashboard](https://github.com/saythename1725/Ken_Dashboard.py)
  * Extracted desired youtube data using Youtube data API and analyzed it.
