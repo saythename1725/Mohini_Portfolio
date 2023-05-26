@@ -9,6 +9,7 @@ This is a website for all my projects
 
 ![](/images/download.png)
 
-# [Multiple Disease Prediction System](https://github.com/saythename1725/multiple-disease-prediction-web-app
-/code.py)
+# [Multiple Disease Prediction System](https://github.com/saythename1725/multiple-disease-prediction-web-app/code.py)
 * Built a web app for various diseases using different machine learning models and deployed it using streamlit server
+
+![](images/web-screenshot-26-05-2023.jpg)
