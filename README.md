@@ -15,7 +15,7 @@ This is a website for all my projects
 
 <img src="images/web-screenshot-26-05-2023.jpg" alt="Multiple Disease Prediction System" width="800" height="300">
 
-##[Ken's Youtube Dashboard](https://github.com/saythename1725/Ken_Dashboard.py)
+## [Ken's Youtube Dashboard](https://github.com/saythename1725/Ken_Dashboard.py)
  * Extracted desired youtube data using Youtube data API and analyzed it.
  * Built an interactive dashboard for the youtube channel.
  
