@@ -1,286 +1,381 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f7f4">
-  <title>Mohini Satarupa Jena — ML Engineer | Applied AI & GenAI</title>
-  <meta name="description" content="Mohini Satarupa Jena is an ML Engineer working across production machine learning, fintech credit risk, applied GenAI, RAG, agentic workflows and multilingual voice AI.">
-  <meta property="og:title" content="Mohini Satarupa Jena — ML Engineer | Applied AI & GenAI">
-  <meta property="og:description" content="Production ML, fintech credit risk, retrieval-grounded LLM systems and multilingual voice AI.">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%CE%BC%3C/text%3E%3C/svg%3E">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Mohini Satarupa Jena","jobTitle":"Machine Learning Engineer","email":"mohinisatarupajena@gmail.com","sameAs":["https://github.com/saythename1725","https://www.linkedin.com/in/mohini-satarupa-jena/"]}
-  </script>
-  <style>
-    :root{--bg:#f7f7f4;--paper:#fff;--ink:#171a20;--muted:#5d6470;--line:#dedfd9;--accent:#284d91;--soft:#edf1f7;--green:#246548;--shadow:0 12px 35px rgba(24,31,44,.06);color-scheme:light}
-    [data-theme="dark"]{--bg:#101319;--paper:#171c25;--ink:#edf0f5;--muted:#a9b1bf;--line:#303744;--accent:#a9c3fa;--soft:#202a3a;--green:#86c9a6;--shadow:0 12px 35px rgba(0,0,0,.18);color-scheme:dark}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:90px}
-    body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Times New Roman",Times,serif}
-    a{color:var(--accent);text-underline-offset:4px}
-    a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-    .wrap{width:min(1080px,calc(100% - 40px));margin:auto}
-    .topbar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{font-weight:bold;color:var(--ink);text-decoration:none;white-space:nowrap}
-    .navlinks{display:flex;align-items:center;gap:22px;list-style:none;padding:0;margin:0}
-    .navlinks a{color:var(--muted);text-decoration:none;font-size:15px}
-    .navlinks a:hover{color:var(--accent)}
-    .theme{border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:7px 11px;border-radius:7px;cursor:pointer}
-    .hero{padding:88px 0 62px;display:grid;grid-template-columns:1.45fr .75fr;gap:48px;align-items:center}
-    .eyebrow{color:var(--accent);font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:bold}
-    h1{font-size:clamp(42px,6.5vw,72px);line-height:1.02;letter-spacing:-.035em;margin:15px 0 20px}
-    .lead{font-size:clamp(21px,2.7vw,27px);line-height:1.35;margin:0 0 18px;max-width:740px}
-    .intro{color:var(--muted);max-width:690px;margin:0 0 27px}
-    .actions{display:flex;flex-wrap:wrap;gap:11px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border:1px solid var(--accent);border-radius:7px;text-decoration:none;color:var(--accent);font-weight:bold;font-size:15px}
-    .btn.primary{background:var(--accent);color:#fff}
-    [data-theme="dark"] .btn.primary{color:#101319}
-    .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
-    .profile-card{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:25px;box-shadow:var(--shadow)}
-    .profile-card h2{font-size:22px;margin:0 0 13px}
-    .profile-card p{margin:0 0 13px;color:var(--muted);font-size:16px}
-    .status{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-size:14px;font-weight:bold}
-    .dot{width:8px;height:8px;background:var(--green);border-radius:50%}
-    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 18px}
-    .metric{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:18px}
-    .metric strong{display:block;font-size:clamp(24px,3vw,34px);line-height:1.1;color:var(--accent)}
-    .metric span{display:block;color:var(--muted);font-size:14px;margin-top:7px;line-height:1.3}
-    section{padding:58px 0}
-    .section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}
-    .kicker{color:var(--accent);font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:bold}
-    h2.section-title{font-size:clamp(29px,4vw,39px);line-height:1.1;margin:5px 0 0}
-    .section-note{color:var(--muted);max-width:460px;margin:0;font-size:15px}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-    .card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:23px;box-shadow:var(--shadow)}
-    .card h3{font-size:22px;line-height:1.2;margin:0 0 10px}
-    .card p{color:var(--muted);margin:0 0 12px}
-    .card ul{padding-left:20px;margin:12px 0 0}
-    .card li{margin:0 0 7px}
-    .taglist{display:flex;flex-wrap:wrap;gap:7px;margin:13px 0}
-    .tag{background:var(--soft);border:1px solid var(--line);border-radius:99px;padding:3px 9px;font-size:13px;color:var(--muted)}
-    .label{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:bold}
-    .project{border-left:4px solid var(--accent)}
-    .project-top{display:flex;justify-content:space-between;align-items:start;gap:15px}
-    .project-top .btn{white-space:nowrap;padding:7px 11px}
-    .architecture{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:13px 15px;margin:14px 0;color:var(--muted);font-size:14px;overflow-wrap:anywhere}
-    .impact{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-    .impact div{border-top:2px solid var(--line);padding-top:10px}
-    .impact strong{display:block;font-size:24px;color:var(--accent)}
-    .impact span{font-size:13px;color:var(--muted)}
-    .timeline{display:grid;gap:16px}
-    .role{display:grid;grid-template-columns:210px 1fr;gap:25px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:24px}
-    .role-meta{color:var(--muted);font-size:15px}
-    .role-meta strong{display:block;color:var(--ink);font-size:18px}
-    .role h3{margin:0 0 5px;font-size:22px}
-    .role .summary{color:var(--muted);margin:0 0 12px}
-    .role ul{margin:0;padding-left:20px}
-    .role li{margin-bottom:8px}
-    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
-    .skill{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:19px}
-    .skill h3{font-size:18px;margin:0 0 7px}
-    .skill p{margin:0;color:var(--muted);font-size:15px}
-    .recognition{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
-    .award{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:18px}
-    .award strong{display:block;font-size:19px}
-    .award span{color:var(--muted);font-size:14px}
-    .edu{display:flex;justify-content:space-between;gap:20px;padding:17px 0;border-bottom:1px solid var(--line)}
-    .edu strong{display:block}
-    .edu span{color:var(--muted)}
-    .contact{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:24px}
-    .contact p{color:var(--muted);margin:8px 0 0;max-width:590px}
-    footer{border-top:1px solid var(--line);padding:25px 0 35px;color:var(--muted);font-size:14px}
-    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    @media(max-width:800px){.hero{grid-template-columns:1fr;gap:25px;padding-top:60px}.metrics{grid-template-columns:repeat(2,1fr)}.role{grid-template-columns:1fr;gap:10px}.recognition{grid-template-columns:1fr}.section-head{display:block}.section-note{margin-top:10px}}
-    @media(max-width:620px){.wrap{width:min(100% - 28px,1080px)}.navlinks{gap:12px}.navlinks li:nth-child(2),.navlinks li:nth-child(3){display:none}.brand{font-size:15px}.grid,.skills-grid{grid-template-columns:1fr}.project-top{display:block}.project-top .btn{margin:7px 0 0}.impact{grid-template-columns:1fr}.contact{display:block}.contact .actions{margin-top:18px}body{font-size:16px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohini Satarupa Jena | ML Engineer — Credit Risk, Production Systems & GenAI</title>
+<meta name="description" content="Portfolio of Mohini Satarupa Jena: Senior Analytics & ML Engineer specializing in credit risk models, real-time decisioning pipelines, and evidence-grounded GenAI agents. IIT Ropar M.Sc. Math.">
+<meta property="og:title" content="Mohini Satarupa Jena | ML Engineer">
+<meta property="og:description" content="Production ML Systems (1.6M+ users/mo), Credit Risk & Underwriting, and Grounded GenAI Agents. IIT Ropar M.Sc.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚡%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohini Satarupa Jena",
+  "jobTitle": "Senior Machine Learning Engineer",
+  "email": "mailto:mohinisatarupajena@gmail.com",
+  "telephone": "+919599367153",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Delhi",
+    "addressCountry": "India"
+  },
+  "almaMater": [
+    {"@type": "CollegeOrUniversity", "name": "Indian Institute of Technology (IIT) Ropar"},
+    {"@type": "CollegeOrUniversity", "name": "Delhi University, Gargi College"}
+  ],
+  "sameAs": [
+    "https://github.com/saythename1725",
+    "https://www.linkedin.com/in/mohini-satarupa-jena/"
+  ]
+}
+</script>
+<style>
+:root {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --panel-border: #30363d;
+  --ink: #f0f6fc;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --accent-glow: rgba(88, 166, 255, 0.15);
+  --accent-ink: #0d1117;
+  --emerald: #3fb950;
+  --amber: #d29922;
+  --rule: #21262d;
+  --tint: #1c2128;
+  --badge-bg: #21262d;
+  --badge-txt: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #f6f8fa;
+  --panel: #ffffff;
+  --panel-border: #d0d7de;
+  --ink: #1f2328;
+  --muted: #57606a;
+  --accent: #0969da;
+  --accent-glow: rgba(9, 105, 218, 0.08);
+  --accent-ink: #ffffff;
+  --emerald: #1a7f37;
+  --amber: #9a6700;
+  --rule: #d8dee4;
+  --tint: #f3f4f6;
+  --badge-bg: #eff1f3;
+  --badge-txt: #24292f;
+  color-scheme: light;
+}
+
+html { scroll-padding-top: 5rem; scroll-behavior: smooth; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-size: 17px; line-height: 1.65; transition: background 0.2s, color 0.2s; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+a { color: var(--accent); text-underline-offset: 3px; text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; background: var(--panel); color: var(--ink); padding: .5rem 1rem; z-index: 99; border: 1px solid var(--panel-border); }
+
+nav { position: sticky; top: 0; z-index: 10; background: rgba(13, 17, 23, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; justify-space-between: space-between; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+[data-theme="light"] nav { background: rgba(246, 248, 250, 0.85); }
+nav .brand { font-weight: 700; font-size: 1.1rem; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: .5rem; }
+nav ul { display: flex; gap: 1.2rem; margin: 0; padding: 0; list-style: none; align-items: center; }
+nav a { color: var(--muted); font-size: .95rem; font-weight: 500; transition: color 0.2s; }
+nav a:hover, nav a[aria-current="true"] { color: var(--ink); }
+#theme { background: var(--panel); color: var(--ink); border: 1px solid var(--panel-border); border-radius: 6px; padding: .3rem .7rem; font-size: .85rem; font-weight: 600; cursor: pointer; }
+
+.hero { padding: 3.5rem 0 2.5rem; }
+.badge-label { display: inline-flex; align-items: center; gap: .5rem; background: var(--accent-glow); color: var(--accent); border: 1px solid var(--accent); padding: .25rem .75rem; border-radius: 99px; font-size: .85rem; font-weight: 600; margin-bottom: 1.2rem; }
+.badge-label::before { content: ""; display: inline-block; width: 8px; height: 8px; background: var(--emerald); border-radius: 50%; }
+h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); line-height: 1.1; margin: 0 0 1rem; font-weight: 800; letter-spacing: -.02em; }
+.pitch { font-size: clamp(1.2rem, 2.8vw, 1.45rem); line-height: 1.4; color: var(--ink); margin: 0 0 1.2rem; max-width: 42ch; font-weight: 500; }
+.sub { color: var(--muted); margin: 0 0 1.8rem; max-width: 62ch; font-size: 1.05rem; }
+
+.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem; margin: 2rem 0; }
+.metric-card { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 8px; padding: 1rem 1.2rem; text-align: left; }
+.metric-num { font-size: 1.8rem; font-weight: 800; color: var(--accent); line-height: 1.1; margin-bottom: .2rem; }
+.metric-label { font-size: .85rem; color: var(--muted); font-weight: 500; line-height: 1.3; }
+
+.btns { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .65rem 1.2rem; border: 1px solid var(--panel-border); border-radius: 6px; text-decoration: none; font-size: .95rem; font-weight: 600; background: var(--panel); color: var(--ink); transition: all 0.2s; }
+.btn:hover { border-color: var(--muted); background: var(--tint); text-decoration: none; }
+.btn.main { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.main:hover { opacity: .9; }
+
+section { padding: 2.8rem 0; border-bottom: 1px solid var(--rule); }
+section:last-of-type { border-bottom: none; }
+h2 { font-size: 1.6rem; margin: 0 0 1.5rem; font-weight: 700; letter-spacing: -.01em; display: flex; align-items: center; gap: .6rem; }
+h2::before { content: ""; display: inline-block; width: 4px; height: 1.3rem; background: var(--accent); border-radius: 2px; }
+
+.story-block { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 8px; padding: 1.5rem 1.6rem; margin-bottom: 2rem; font-size: 1.02rem; line-height: 1.7; color: var(--ink); }
+.story-block p { margin: 0 0 1rem; }
+.story-block p:last-child { margin: 0; }
+
+.exp-card, .proj { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 8px; padding: 1.6rem 1.6rem; margin-bottom: 1.8rem; position: relative; }
+.exp-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .4rem 1rem; margin-bottom: .4rem; }
+.exp-title { font-size: 1.3rem; margin: 0; font-weight: 700; color: var(--ink); }
+.exp-company { font-size: 1.05rem; color: var(--accent); font-weight: 600; margin-bottom: .6rem; }
+.exp-date { font-size: .88rem; color: var(--muted); font-weight: 500; }
+.award-badge { display: inline-flex; align-items: center; gap: .4rem; background: rgba(210, 153, 34, 0.15); color: var(--amber); border: 1px solid rgba(210, 153, 34, 0.4); border-radius: 4px; padding: .15rem .6rem; font-size: .82rem; font-weight: 600; margin: .4rem 0 1rem; }
+
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0 1.2rem; padding: 0; list-style: none; }
+.chips li { background: var(--badge-bg); color: var(--badge-txt); border: 1px solid var(--panel-border); border-radius: 4px; padding: .15rem .6rem; font-size: .82rem; font-weight: 500; }
+
+.feat { margin: .5rem 0 1rem; padding-left: 1.2rem; }
+.feat li { margin-bottom: .5rem; font-size: .98rem; }
+.feat li strong { color: var(--ink); }
+
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
+.skill-cat { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 8px; padding: 1.2rem 1.4rem; }
+.skill-cat h3 { font-size: 1.05rem; margin: 0 0 .8rem; color: var(--accent); font-weight: 700; }
+.skill-cat p { margin: 0; font-size: .95rem; color: var(--muted); line-height: 1.6; }
+
+.edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.edu-card { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 8px; padding: 1.2rem 1.4rem; }
+.edu-card h3 { font-size: 1.1rem; margin: 0 0 .2rem; font-weight: 700; color: var(--ink); }
+.edu-card p { margin: 0; font-size: .92rem; color: var(--muted); }
+
+.contact-card { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 8px; padding: 2rem; text-align: center; }
+.contact-card p { max-width: 48ch; margin: 0 auto 1.5rem; color: var(--muted); }
+
+footer { padding: 2rem 0 3rem; text-align: center; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--rule); margin-top: 2rem; }
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .hero { padding: 2rem 0 1.5rem; }
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+  .exp-header { flex-direction: column; align-items: flex-start; }
+}
+</style>
 </head>
 <body>
-  <div class="topbar">
-    <nav class="wrap" aria-label="Main navigation">
-      <a class="brand" href="#top">Mohini Satarupa Jena</a>
-      <ul class="navlinks">
-        <li><a href="#work">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li>
-        <li><a href="resume.pdf" target="_blank" rel="noopener">Resume ↗</a></li>
-      </ul>
-      <button class="theme" id="theme" type="button" aria-label="Toggle colour theme">◐</button>
-    </nav>
-  </div>
+<a class="skip" href="#main-content">Skip to content</a>
+<div class="wrap">
+  <nav aria-label="Main Navigation">
+    <a href="#" class="brand">Mohini Satarupa Jena</a>
+    <ul>
+      <li><a href="#story">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme" type="button" aria-label="Toggle theme">Theme</button>
+  </nav>
 
-  <main id="top" class="wrap">
-    <header class="hero">
-      <div>
-        <div class="eyebrow">Machine Learning Engineer · Applied AI · GenAI</div>
-        <h1>I build ML systems that make it into production.</h1>
-        <p class="lead">From credit-risk models serving fintech journeys to retrieval-grounded LLM agents and multilingual voice experiences.</p>
-        <p class="intro">I’m an ML Engineer with 3+ years of experience across fintech, credit risk, applied machine learning and GenAI. I work across the lifecycle: framing business problems, building models and retrieval pipelines, deploying services, monitoring behaviour and measuring outcomes.</p>
-        <div class="actions">
-          <a class="btn primary" href="#projects">Explore projects</a>
-          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download resume</a>
-          <a class="btn" href="https://github.com/saythename1725" target="_blank" rel="noopener">GitHub ↗</a>
-          <a class="btn" href="https://www.linkedin.com/in/mohini-satarupa-jena/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </div>
+  <header class="hero">
+    <div class="badge-label">IIT Ropar M.Sc. Math • 3+ Yrs Machine Learning Experience</div>
+    <h1>Building Production ML Systems & Evidence-Grounded GenAI Agents.</h1>
+    <p class="pitch">I bridge rigorous credit risk engineering with agentic AI systems that drive real business revenue and operational precision.</p>
+    <p class="sub">Core contributor at Paisabazaar (1.6M+ monthly users across 10+ partner banks) and former ML Engineer at LenDenClub. Specialized in low-latency risk pipelines, feature stores, and grounded LLM architectures.</p>
+    
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-num">1.6M+</div>
+        <div class="metric-label">Monthly Users Processed in Real-Time</div>
       </div>
-      <aside class="profile-card">
-        <div class="status"><span class="dot"></span> Open to ML / AI / GenAI opportunities</div>
-        <h2>What I bring</h2>
-        <p><strong>Production ML:</strong> credit risk, propensity models, feature engineering, inference APIs and monitoring.</p>
-        <p><strong>Applied GenAI:</strong> RAG, LLM integrations, tool calling, internal assistants and voice AI.</p>
-        <p><strong>Engineering mindset:</strong> evaluation, reliability, latency, human handoff and measurable business impact.</p>
-        <p><strong>Based in:</strong> Delhi, India</p>
-      </aside>
-    </header>
-
-    <div class="metrics" aria-label="Selected career metrics">
-      <div class="metric"><strong>1.6M+</strong><span>Monthly users / applications served across credit-card funnel</span></div>
-      <div class="metric"><strong>30K+</strong><span>Cards disbursed per month</span></div>
-      <div class="metric"><strong>&lt;3s</strong><span>p99 inference latency in lending model pipeline</span></div>
-      <div class="metric"><strong>99.9%</strong><span>Availability reported for lending model pipeline</span></div>
+      <div class="metric-card">
+        <div class="metric-num">&lt;3s</div>
+        <div class="metric-label">p99 Latency at 99.9% Uptime</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">₹1 Cr+</div>
+        <div class="metric-label">Direct Revenue Impact Delivered</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">3x</div>
+        <div class="metric-label">Company Performance Awards (2x SPOT, 1x NOVA)</div>
+      </div>
     </div>
 
-    <section id="work">
-      <div class="section-head">
-        <div><div class="kicker">Professional experience</div><h2 class="section-title">Production experience, not just prototypes.</h2></div>
-        <p class="section-note">I’ve worked on systems where model quality, operational reliability and business outcomes all matter.</p>
+    <div class="btns">
+      <a class="btn main" href="mailto:mohinisatarupajena@gmail.com">Email Me</a>
+      <a class="btn" href="mohini_jena_CV_2026.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+      <a class="btn" href="https://github.com/saythename1725" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/mohini-satarupa-jena/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="story">
+      <h2>My Engineering Philosophy</h2>
+      <div class="story-block">
+        <p><strong>From Mathematical Foundations to Scale:</strong> My journey began with an M.Sc. in Mathematics from <strong>IIT Ropar</strong>, where I developed an intuitive, first-principles rigor for statistical modeling. In industry, I applied this mathematical precision to Fintech credit underwriting—engineering 1,600+ features, building vendor-agnostic risk models, and maintaining sub-3-second p99 latencies on millions of loan applications.</p>
+        <p><strong>Bridging Risk ML and Agentic GenAI:</strong> Today at <strong>Paisabazaar</strong>, I combine classical gradient boosting with production GenAI. I build LLM systems anchored in strict evidence-retrieval (RAG) and tool calling—ensuring that whether an agent is calculating credit card propensity or serving internal Slack queries, it operates with complete facts, verifiable citations, and deterministic fallback paths.</p>
       </div>
-      <div class="timeline">
-        <article class="role">
-          <div class="role-meta"><strong>Paisabazaar</strong>Senior Executive – Analytics<br>(Machine Learning Engineer)<br>June 2025 – Present</div>
+    </section>
+
+    <section id="experience">
+      <h2>Work Experience</h2>
+
+      <article class="exp-card">
+        <div class="exp-header">
           <div>
-            <h3>Applied ML and GenAI in the credit-card funnel</h3>
-            <p class="summary">Working across propensity modelling, internal GenAI assistants, agent operations and lead allocation for a large fintech funnel.</p>
-            <ul>
-              <li>Built and deployed real-time XGBoost credit-card propensity models scoring 1.6M+ applications across 10+ partner banks; improved targeted-campaign efficiency by 30%.</li>
-              <li>Deployed a self-hosted DeepSeek analytics agent grounded in Markdown knowledge files and accessible through Slack and Google Chat, handling 100+ queries per week.</li>
-              <li>Built a GPT-4o mini analytics assistant using SQL retrieval and Streamlit, reducing manual reporting time by 50%.</li>
-              <li>Designed AgentOps dashboards tracking 10+ metrics across 700+ agents using SQL, Python and Tableau.</li>
-              <li>Designed a lead-to-agent allocation framework processing 0.8M+ leads per month, improving conversion by 3%.</li>
-            </ul>
-            <div class="taglist"><span class="tag">XGBoost</span><span class="tag">DeepSeek</span><span class="tag">GPT-4o mini</span><span class="tag">SQL</span><span class="tag">Streamlit</span><span class="tag">Python</span><span class="tag">Tableau</span></div>
+            <h3 class="exp-title">Senior Executive - Analytics (Machine Learning Engineer)</h3>
+            <div class="exp-company">Paisabazaar • Delhi, India</div>
           </div>
-        </article>
-        <article class="role">
-          <div class="role-meta"><strong>LenDenClub</strong>Machine Learning Engineer<br>July 2023 – June 2025</div>
+          <div class="exp-date">June 2025 – Present</div>
+        </div>
+        <div class="award-badge">🏆 NOVA Award Winner — Top Performance Recognition</div>
+        <ul class="chips">
+          <li>XGBoost</li><li>DeepSeek</li><li>GPT-4o mini</li><li>Streamlit</li><li>SQL</li><li>AgentOps</li><li>Tableau</li><li>Docker</li>
+        </ul>
+        <ul class="feat">
+          <li><strong>Credit Card Propensity Engines:</strong> Built and deployed real-time XGBoost propensity models scoring 1.6M+ applications/month across 10+ partner banks, boosting targeted campaign efficiency by 30%.</li>
+          <li><strong>Lead-to-Agent Optimization:</strong> Designed an automated allocation framework processing 0.8M+ leads/month, directly improving conversion rate by 3%.</li>
+          <li><strong>Self-Hosted DeepSeek Analytics Agent:</strong> Deployed a self-hosted DeepSeek AI assistant grounded in markdown knowledge bases for Slack and Google Chat (handling 100+ queries/week).</li>
+          <li><strong>Internal SQL Assistant:</strong> Created an internal GenAI analytics agent (GPT-4o mini + SQL retrieval + Streamlit) cutting manual reporting overhead by 50%.</li>
+          <li><strong>AgentOps & Infrastructure:</strong> Designed AgentOps tracking dashboards for 700+ agents tracking 10+ core KPI metrics across operations.</li>
+        </ul>
+      </article>
+
+      <article class="exp-card">
+        <div class="exp-header">
           <div>
-            <h3>Credit-risk modelling and automated underwriting</h3>
-            <p class="summary">Built and operated ML components for a P2P lending platform, balancing approval growth, collection quality and production reliability.</p>
-            <ul>
-              <li>Developed a vendor-agnostic LightGBM credit-risk model integrating bureau and vendor data, evaluated on 1.2M+ applications per month.</li>
-              <li>Engineered 1,600+ features and maintained training-serving parity using MLflow; automated drift-triggered retraining.</li>
-              <li>Delivered inference at less than 3s p99 latency with 99.9% availability.</li>
-              <li>Automated 75% of credit underwriting through BRE workflows for STPL, HTPL and Merchant Loan; achieved a 26% approval rate with 97% collection efficiency.</li>
-              <li>Built drift monitoring using OpenSearch and SQL, reducing mean time to recovery by 30%.</li>
-              <li>Analysed marketing, app and user behaviour, contributing to a ₹1 Cr revenue increase in January 2024.</li>
-            </ul>
-            <div class="taglist"><span class="tag">LightGBM</span><span class="tag">MLflow</span><span class="tag">Feature engineering</span><span class="tag">OpenSearch</span><span class="tag">SQL</span><span class="tag">Docker</span><span class="tag">FastAPI</span></div>
+            <h3 class="exp-title">Machine Learning Engineer</h3>
+            <div class="exp-company">LenDenClub (P2P Lending) • Mumbai / Remote</div>
           </div>
-        </article>
-      </div>
+          <div class="exp-date">July 2023 – June 2025</div>
+        </div>
+        <div class="award-badge">🏆 2x SPOT Award Winner — Top Performance Recognition</div>
+        <ul class="chips">
+          <li>LightGBM</li><li>MLflow</li><li>OpenSearch</li><li>Feature Stores</li><li>FastAPI</li><li>Drift Monitoring</li><li>AWS</li>
+        </ul>
+        <ul class="feat">
+          <li><strong>Vendor-Agnostic Risk Model:</strong> Developed a core credit risk pipeline (LightGBM) evaluating 1.2M+ monthly applications at &lt;3s p99 latency with 99.9% system availability.</li>
+          <li><strong>Feature Engineering at Scale:</strong> Engineered and managed 1,600+ features ensuring strict training-serving parity via MLflow and automated drift-triggered retraining loops.</li>
+          <li><strong>Business & Revenue Growth:</strong> Behavioral ML analysis directly generated a ₹1 Crore revenue increase in a single month (Jan 2024).</li>
+          <li><strong>Automated Credit BRE:</strong> Automated underwriting decisions across STPL, HTPL, and Merchant Loans by 75%, achieving a 26% approval rate and 97% collection efficiency.</li>
+          <li><strong>Model Drift Architecture:</strong> Implemented real-time model monitoring using OpenSearch and SQL, cutting Mean Time to Resolution (MTTR) by 30%.</li>
+        </ul>
+      </article>
     </section>
 
     <section id="projects">
-      <div class="section-head">
-        <div><div class="kicker">Selected projects</div><h2 class="section-title">Applied AI, with engineering detail.</h2></div>
-        <p class="section-note">A closer look at the systems I’ve been building beyond my day-to-day production work.</p>
-      </div>
-      <article class="card project">
-        <div class="project-top">
-          <div><div class="label">Featured · Voice AI + RAG</div><h3>Multilingual VoiceOps Support Agent</h3></div>
-          <a class="btn" href="https://github.com/saythename1725/mohini_voiceops" target="_blank" rel="noopener">View repository ↗</a>
+      <h2>Featured Open-Source & GenAI Projects</h2>
+
+      <article class="proj">
+        <div class="exp-header">
+          <h3 class="exp-title">Multilingual VoiceOps Support Agent</h3>
+          <a class="btn" href="https://github.com/saythename1725/YOUR-REPO" target="_blank" rel="noopener">GitHub Repository</a>
         </div>
-        <p>A multilingual customer-support agent designed to answer from company policy evidence, use tools for verified actions and escalate safely when a human needs to take over.</p>
-        <div class="taglist"><span class="tag">Python</span><span class="tag">RAG</span><span class="tag">Gemini Embeddings</span><span class="tag">ChromaDB</span><span class="tag">Ollama</span><span class="tag">Gnani STT / TTS</span><span class="tag">Tool calling</span></div>
-        <div class="architecture">Voice input → Speech-to-text → Query rewrite → Embedding + retrieval → Evidence-aware response / verified tool → Human escalation when needed → Text-to-speech</div>
-        <ul>
-          <li>Supports English, Hindi and Hinglish voice interactions with speech-to-text and text-to-speech.</li>
-          <li>Retrieves policy sections and grounds responses in evidence instead of relying on model memory alone.</li>
-          <li>Uses verified order lookup with caller verification before exposing private order details.</li>
-          <li>Creates escalation tickets and confirms handover only after successful tool execution.</li>
-          <li>Evaluation tracks answer quality, evidence retrieval, tool-call correctness, unsupported claims and latency across policy questions and multi-turn conversations.</li>
+        <ul class="chips">
+          <li>Python</li><li>Generative AI</li><li>Gemini Embeddings</li><li>ChromaDB</li><li>Ollama</li><li>Gnani Speech APIs</li><li>Tool Calling</li>
         </ul>
-        <div class="impact">
-          <div><strong>52</strong><span>Policy questions in evaluation set</span></div>
-          <div><strong>23</strong><span>Multi-turn conversations evaluated</span></div>
-          <div><strong>3</strong><span>Language modes: English, Hindi, Hinglish</span></div>
-        </div>
+        <p>A production-ready voice agent engineered to provide evidence-grounded customer support in English, Hindi, and Hinglish. It eliminates hallucination by grounding answers in policy vector stores and executes deterministic operational tasks via function calling.</p>
+        <ul class="feat">
+          <li><strong>Evidence-Grounded Policy Retrieval:</strong> Retrieves precise policy chunks and outputs verified sources with every answer.</li>
+          <li><strong>Multilingual Voice Pipeline:</strong> Integrates low-latency speech-to-text (STT) and text-to-speech (TTS) via Gnani Speech APIs for fluid conversation.</li>
+          <li><strong>Secure Verification & Tool Calling:</strong> Verifies user identity prior to fetching sensitive order state or triggering support ticket escalation.</li>
+          <li><strong>Rigorous Evaluation Framework:</strong> Evaluated on 52 complex policy test cases and 23 multi-turn dialogues to measure answer accuracy, latency, and retrieval precision.</li>
+        </ul>
       </article>
-      <div class="grid" style="margin-top:16px">
-        <article class="card">
-          <div class="label">Enterprise GenAI · Paisabazaar</div>
-          <h3>Internal Analytics Assistant</h3>
-          <p>Stakeholder-facing assistant combining an LLM with SQL-based retrieval over structured business data, surfaced through a Streamlit interface.</p>
-          <ul><li>GPT-4o mini integration</li><li>SQL retrieval for data-backed responses</li><li>Reduced manual reporting time by 50%</li></ul>
-          <div class="taglist"><span class="tag">LLM integration</span><span class="tag">SQL</span><span class="tag">Streamlit</span></div>
-        </article>
-        <article class="card">
-          <div class="label">Agentic AI · Paisabazaar</div>
-          <h3>Knowledge-grounded Analytics Agent</h3>
-          <p>Self-hosted DeepSeek agent made available through workplace chat channels, grounded on internal Markdown knowledge files.</p>
-          <ul><li>Slack and Google Chat access</li><li>100+ queries per week</li><li>Knowledge-grounded responses for internal users</li></ul>
-          <div class="taglist"><span class="tag">DeepSeek</span><span class="tag">RAG / knowledge retrieval</span><span class="tag">Agent deployment</span></div>
-        </article>
-      </div>
-      <p style="color:var(--muted);font-size:14px;margin-top:15px">Production case studies describe work delivered in employment; the featured repository links to an independent project. Confidential implementation details are intentionally not included.</p>
     </section>
 
-    <section id="skills">
-      <div class="section-head">
-        <div><div class="kicker">Technical toolkit</div><h2 class="section-title">Skills across the ML lifecycle.</h2></div>
-        <p class="section-note">Grouped by how I apply the tools, rather than as a long keyword list.</p>
-      </div>
+    <section id="stack">
+      <h2>Technical Stack & Expertise</h2>
       <div class="skills-grid">
-        <article class="skill"><h3>GenAI, LLMs & Agents</h3><p>Retrieval-Augmented Generation (RAG), agentic AI, multi-agent orchestration, LangChain, LangGraph, prompt engineering, LLM integration, tool calling, conversational AI.</p></article>
-        <article class="skill"><h3>Retrieval & Evaluation</h3><p>Embeddings, semantic retrieval, ChromaDB, evidence-grounded generation, query rewriting, retrieval evaluation, answer quality, tool-call evaluation, hallucination analysis.</p></article>
-        <article class="skill"><h3>Machine Learning</h3><p>LightGBM, XGBoost, scikit-learn, regression, classification, decision trees, random forests, gradient boosting, clustering, credit-risk and propensity modelling.</p></article>
-        <article class="skill"><h3>Deep Learning</h3><p>ANN, CNN, DNN, computer vision, transfer learning, TensorFlow 2.x, Keras.</p></article>
-        <article class="skill"><h3>MLOps & Model Reliability</h3><p>MLflow, model monitoring, drift detection, training-serving parity, feature engineering, REST APIs, inference optimisation, Docker.</p></article>
-        <article class="skill"><h3>Programming & Data</h3><p>Python, SQL, NumPy, Pandas, SciPy, FastAPI, OpenSearch, Tableau.</p></article>
-        <article class="skill"><h3>Cloud & Workflow</h3><p>AWS (EC2, S3, boto3), Airflow, Docker, API-based integrations.</p></article>
-        <article class="skill"><h3>Voice AI</h3><p>Speech-to-text, text-to-speech, multilingual and code-mixed voice experiences, Gnani speech APIs.</p></article>
-      </div>
-    </section>
-
-    <section id="recognition">
-      <div class="section-head"><div><div class="kicker">Recognition</div><h2 class="section-title">Work recognised by the teams.</h2></div></div>
-      <div class="recognition">
-        <div class="award"><strong>2× SPOT Award</strong><span>LenDenClub — for the ₹1 Cr revenue impact and vendor-agnostic credit-risk model.</span></div>
-        <div class="award"><strong>1× NOVA Award</strong><span>Paisabazaar — for end-to-end credit-card operations tracking and operational efficiency.</span></div>
-        <div class="award"><strong>Production ownership</strong><span>Experience spanning model development, deployment, monitoring and business-facing applications.</span></div>
+        <div class="skill-cat">
+          <h3>AI & Agentic Systems</h3>
+          <p>Retrieval-Augmented Generation (RAG), Agentic AI, Multi-Agent Orchestration, LangChain, LangGraph, Tool Calling, Vector Databases (ChromaDB, OpenSearch), Prompt Engineering</p>
+        </div>
+        <div class="skill-cat">
+          <h3>Machine Learning & Credit Risk</h3>
+          <p>LightGBM, XGBoost, Scikit-learn, Feature Engineering (1600+ features), Risk Underwriting, Propensity Modeling, Drift Detection, Model Monitoring</p>
+        </div>
+        <div class="skill-cat">
+          <h3>MLOps & Data Infra</h3>
+          <p>MLflow, Feature Stores, Training-Serving Parity, REST APIs (FastAPI), Airflow, Docker, AWS (EC2, S3, boto3), SQL, Streamlit</p>
+        </div>
+        <div class="skill-cat">
+          <h3>Deep Learning & Mathematics</h3>
+          <p>Statistical Modeling, Linear Algebra, TensorFlow 2.x, Keras, Computer Vision, DeepSeek, Open-Source LLM Fine-Tuning</p>
+        </div>
       </div>
     </section>
 
     <section id="education">
-      <div class="section-head"><div><div class="kicker">Education</div><h2 class="section-title">Mathematical foundations.</h2></div></div>
-      <div class="edu"><div><strong>Indian Institute of Technology (IIT), Ropar</strong><span>M.Sc. Mathematics</span></div><span>2023</span></div>
-      <div class="edu"><div><strong>Gargi College, University of Delhi</strong><span>B.Sc. (Hons.) Mathematics</span></div><span>2020</span></div>
+      <h2>Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <h3>M.Sc. in Mathematics</h3>
+          <p><strong>Indian Institute of Technology (IIT), Ropar</strong></p>
+          <p>2021 – 2023</p>
+        </div>
+        <div class="edu-card">
+          <h3>B.Sc. in Mathematics</h3>
+          <p><strong>Delhi University, Gargi College</strong></p>
+          <p>2017 – 2020</p>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
-      <div class="contact">
-        <div><div class="kicker">Let’s connect</div><h2 class="section-title">Building something in AI?</h2><p>I’m interested in ML Engineer, Applied AI and GenAI opportunities where I can build reliable systems and take them from prototype to production.</p></div>
-        <div class="actions">
-          <a class="btn primary" href="mailto:mohinisatarupajena@gmail.com">Email me</a>
-          <a class="btn" href="https://github.com/saythename1725" target="_blank" rel="noopener">GitHub ↗</a>
-          <a class="btn" href="https://www.linkedin.com/in/mohini-satarupa-jena/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <h2>Get In Touch</h2>
+      <div class="contact-card">
+        <p>I am actively exploring Machine Learning Engineer, Credit Risk ML, and GenAI / LLM Engineering roles. Whether you want to discuss low-latency model inference or agentic RAG architectures, let's connect!</p>
+        <div class="btns" style="justify-content: center;">
+          <a class="btn main" href="mailto:mohinisatarupajena@gmail.com">Email: mohinisatarupajena@gmail.com</a>
+          <button id="copy" class="btn" type="button">Copy Email Address</button>
+          <a class="btn" href="https://www.linkedin.com/in/mohini-satarupa-jena/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/saythename1725" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </section>
   </main>
-  <footer><div class="wrap footer-row"><span>© <span id="year"></span> Mohini Satarupa Jena · Delhi, India</span><span>Designed around production ML, applied AI and measurable impact.</span></div></footer>
-  <script>
-    (function(){
-      const root=document.documentElement,button=document.getElementById('theme');
-      try{const saved=localStorage.getItem('portfolio-theme');if(saved)root.dataset.theme=saved;}catch(e){}
-      button.addEventListener('click',function(){
-        const next=root.dataset.theme==='dark'?'light':'dark';
-        root.dataset.theme=next;
-        try{localStorage.setItem('portfolio-theme',next);}catch(e){}
+
+  <footer>
+    <p>© 2026 Mohini Satarupa Jena • Delhi, India • Built for performance & evidence-grounded precision</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var r = document.documentElement, tb = document.getElementById('theme');
+  try {
+    var s = localStorage.getItem('theme');
+    if (s) r.setAttribute('data-theme', s);
+  } catch(e){}
+  
+  tb.addEventListener('click', function(){
+    var cur = r.getAttribute('data-theme');
+    var dark = cur ? cur === 'dark' : true;
+    var n = dark ? 'light' : 'dark';
+    r.setAttribute('data-theme', n);
+    try { localStorage.setItem('theme', n); } catch(e){}
+  });
+
+  var cp = document.getElementById('copy');
+  cp.addEventListener('click', function(){
+    var t = 'mohinisatarupajena@gmail.com';
+    var done = function(m){
+      cp.textContent = m;
+      setTimeout(function(){ cp.textContent = 'Copy Email Address'; }, 1800);
+    };
+    try {
+      navigator.clipboard.writeText(t).then(function(){ done('Copied to Clipboard!'); }, function(){ done(t); });
+    } catch(e) { done(t); }
+  });
+
+  var links = document.querySelectorAll('nav a[href^="#"]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting) {
+          links.forEach(function(a){
+            a.setAttribute('aria-current', a.getAttribute('href') === '#' + e.target.id ? 'true' : 'false');
+          });
+        }
       });
-      document.getElementById('year').textContent=new Date().getFullYear();
-    })();
-  </script>
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    document.querySelectorAll('main section').forEach(function(s){ io.observe(s); });
+  }
+})();
+</script>
 </body>
 </html>
