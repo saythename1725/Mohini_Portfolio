@@ -46,26 +46,14 @@ section{padding:2.2rem 0}
 .chips li{background:var(--tint);border:1px solid var(--rule);border-radius:99px;padding:.05rem .75rem;font-size:.92rem}
 .proj h4{font-size:1.1rem;margin:1.3rem 0 .3rem}
 .proj p{margin:0 0 .6rem}
-.demo{background:var(--tint);border:1px solid var(--rule);border-radius:6px;padding:1rem 1.1rem;margin:.6rem 0 1rem}
-.demo .q{display:flex;flex-wrap:wrap;gap:.5rem;margin:.4rem 0 1rem}
-.demo .q button{background:var(--bg);border:1.5px solid var(--rule);border-radius:4px;padding:.3rem .8rem;font-size:1rem}
-.demo .q button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:var(--accent-ink)}
-.note{font-size:.9rem;color:var(--muted);margin:.6rem 0 0}
-.flow{list-style:none;counter-reset:s;margin:0;padding:0 0 0 1.6rem;border-left:2px solid var(--rule)}
-.flow li{counter-increment:s;position:relative;margin:0 0 .7rem;padding-left:.4rem;opacity:.45;transition:opacity .3s}
-.flow li::before{content:counter(s);position:absolute;left:-2.35rem;top:.1rem;width:1.45rem;height:1.45rem;border-radius:50%;background:var(--muted);color:var(--bg);font-size:.82rem;line-height:1.45rem;text-align:center}
-.flow li.on{opacity:1}.flow li.on::before{background:var(--accent);color:var(--accent-ink)}
-.flow li.skip{opacity:.4;font-style:italic}
-.flow .out{display:block;color:var(--muted);font-size:.98rem}
-.flow li.on .out{color:var(--ink)}
-.guard{margin:.3rem 0 .8rem;padding-left:1.2rem}.guard li{margin-bottom:.35rem}
+.feat{margin:.3rem 0 1rem;padding-left:1.2rem}.feat li{margin-bottom:.45rem}
 .skills{display:grid;grid-template-columns:11rem 1fr;gap:.5rem 1.2rem;margin:0}
 .skills dt{font-weight:700}.skills dd{margin:0;color:var(--muted)}
 .contact p{margin:0 0 1rem;max-width:56ch}
 #copy{border:1.5px solid var(--rule);border-radius:4px;background:none;padding:.5rem 1rem;font-size:1.05rem}
 footer{padding:1.5rem 0 3rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.95rem}
 @media (max-width:620px){body{font-size:18px}.skills{grid-template-columns:1fr;gap:0}.skills dd{margin-bottom:.7rem}nav ul{gap:.8rem}nav strong{display:none}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.flow li{transition:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -85,7 +73,7 @@ footer{padding:1.5rem 0 3rem;border-top:1px solid var(--rule);color:var(--muted)
 <header class="hero">
 <h1>I build GenAI agents that answer from evidence.</h1>
 <p class="pitch">ML Engineer working on retrieval-grounded LLMs, tool calling and multilingual voice AI.</p>
-<p class="sub">My agents look up the facts before they speak, call verified tools instead of guessing, and hand over to a person when they should. Try the walkthrough in the first project below.</p>
+<p class="sub">My agents look up the facts before they speak, call verified tools instead of guessing, and hand over to a person when they should.</p>
 <div class="btns">
 <a class="btn main" href="https://github.com/saythename1725">See my GitHub</a>
 <a class="btn" href="mohini_jena_CV_2026.pdf" target="_blank" rel="noopener">View resume (PDF)</a>
@@ -100,32 +88,22 @@ footer{padding:1.5rem 0 3rem;border-top:1px solid var(--rule);color:var(--muted)
 <!-- ADD A PROJECT: copy this whole <article> block, paste it below, then edit the text and links -->
 <article class="proj">
 <header>
-<h3>Multilingual VoiceOps Support Agent</h3>
+<h3>Multilingual Voice Support Agent</h3>
 <a class="btn" href="https://github.com/saythename1725/YOUR-REPO">View on GitHub</a>
 </header>
 <ul class="chips" aria-label="Technologies">
-<li>RAG</li><li>LLM tool calling</li><li>Speech-to-text</li><li>Text-to-speech</li><li>Gnani</li><li>Python</li>
+<li>Python</li><li>Generative AI</li><li>Gemini Embeddings</li><li>Ollama</li><li>ChromaDB</li><li>Gnani Speech APIs</li><li>Pandas</li>
 </ul>
 
-<h4>The problem</h4>
-<p>Support teams answer the same policy questions in many languages, and a voice bot that improvises can quote the wrong refund rule or the wrong order. I built an agent that talks with customers by voice and only says what it can back up.</p>
+<p>Built an AI customer support agent that answers questions using company policy documents in English, Hindi and Hinglish. It supports voice input and spoken replies, handles follow-up questions using conversation context, and can look up verified orders or escalate requests to a human agent.</p>
 
-<h4>Try it: pick a caller question</h4>
-<div class="demo">
-<div class="q" role="group" aria-label="Sample caller questions">
-<button type="button" data-s="0" aria-pressed="true">Return policy question</button>
-<button type="button" data-s="1" aria-pressed="false">Where is my order?</button>
-<button type="button" data-s="2" aria-pressed="false">Complex complaint</button>
-</div>
-<ol class="flow" id="flow" aria-live="polite"></ol>
-<p class="note">An illustrative walkthrough of the agent’s logic with sample text. It is not a live call.</p>
-</div>
-
-<h4>Design decisions</h4>
-<ul class="guard">
-<li>Evidence-grounded answers, so every reply traces back to a policy source.</li>
-<li>Tool calls for order data, so the agent never invents order details.</li>
-<li>Ticket escalation as a first-class path, so a hard case ends with a person, not a bad guess.</li>
+<h4>Key features</h4>
+<ul class="feat">
+<li>Retrieves relevant policy information and records the sources used.</li>
+<li>Uses speech-to-text and text-to-speech for voice conversations.</li>
+<li>Verifies customers before showing private order details.</li>
+<li>Creates a support ticket for escalation and confirms handover only after successful creation.</li>
+<li>Evaluated on 52 policy questions and 23 conversations, tracking answer quality, evidence retrieval, tool calls and latency.</li>
 </ul>
 </article>
 </section>
@@ -166,27 +144,6 @@ var cp=document.getElementById('copy');
 cp.addEventListener('click',function(){
 var t='mohinisatarupajena@gmail.com',done=function(m){cp.textContent=m;setTimeout(function(){cp.textContent='Copy email address'},1800)};
 try{navigator.clipboard.writeText(t).then(function(){done('Copied')},function(){done(t)})}catch(e){done(t)}});
-
-var names=['Listen','Retrieve','Verify','Answer','Escalate'];
-var S=[
-[['Caller says: “What is your return policy?”'],['Finds the returns section of the policy'],null,['Replies by voice, using the retrieved policy text'],null],
-[['Caller says: “Where is my order?”'],['Finds the order tracking policy'],['Calls lookup_order and gets the verified status'],['Replies with the status from the verified record'],null],
-[['Caller describes a complaint outside policy'],['Finds no policy that covers it'],null,['Says it will pass the case to a person'],['Opens a support ticket with the call summary']]
-];
-var flow=document.getElementById('flow'),btns=document.querySelectorAll('.demo .q button'),timers=[];
-var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-function show(i){
-timers.forEach(clearTimeout);timers=[];flow.innerHTML='';
-btns.forEach(function(b,k){b.setAttribute('aria-pressed',k===i?'true':'false')});
-S[i].forEach(function(st,k){
-var li=document.createElement('li'),b=document.createElement('b'),o=document.createElement('span');
-b.textContent=names[k]+'. ';o.className='out';
-if(st){o.textContent=st[0]}else{o.textContent='Not needed for this question.';li.className='skip'}
-li.appendChild(b);li.appendChild(o);flow.appendChild(li);
-if(st){var f=function(){li.classList.add('on')};reduce?f():timers.push(setTimeout(f,350*(k+1)))}
-});}
-btns.forEach(function(b){b.addEventListener('click',function(){show(+b.dataset.s)})});
-show(0);
 
 var links=document.querySelectorAll('nav a[href^="#"]');
 if('IntersectionObserver' in window){
