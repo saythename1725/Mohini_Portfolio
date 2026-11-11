@@ -3,76 +3,135 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Mohini Satarupa Jena | ML and GenAI Projects</title>
-<meta name="description" content="Open-source ML and GenAI projects by Mohini Satarupa Jena: RAG, LLM agents, and voice AI.">
+<title>Mohini Satarupa Jena | ML Engineer, GenAI and Voice AI</title>
+<meta name="description" content="Open-source GenAI projects by Mohini Satarupa Jena: retrieval-grounded LLM agents, tool calling and multilingual voice AI.">
+<meta property="og:title" content="Mohini Satarupa Jena | ML Engineer, GenAI and Voice AI">
+<meta property="og:description" content="Retrieval-grounded LLM agents, tool calling and multilingual voice AI.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📈%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mohini Satarupa Jena","jobTitle":"ML Engineer","email":"mailto:mohinisatarupajena@gmail.com","sameAs":["https://github.com/saythename1725","https://www.linkedin.com/in/YOUR-LINKEDIN-ID"]}</script>
 <style>
-:root{--bg:#fbfbfd;--ink:#14171f;--muted:#505664;--accent:#1f4aa8;--rule:#d6d9e0;--tint:#eff2f8;
+:root{--bg:#fbfbfd;--ink:#14171f;--muted:#4d5463;--accent:#1f4aa8;--accent-ink:#fff;--rule:#d6d9e0;--tint:#eff2f8;--ok:#1d6b3a;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1218;--ink:#e9ebf1;--muted:#a3a9b8;--accent:#8fb2f5;--rule:#2a2f3b;--tint:#171b24;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0f1218;--ink:#e9ebf1;--muted:#a3a9b8;--accent:#8fb2f5;--rule:#2a2f3b;--tint:#171b24;color-scheme:dark}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1218;--ink:#e9ebf1;--muted:#a6acbb;--accent:#8fb2f5;--accent-ink:#0f1218;--rule:#2a2f3b;--tint:#171b24;--ok:#7fd09a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1218;--ink:#e9ebf1;--muted:#a6acbb;--accent:#8fb2f5;--accent-ink:#0f1218;--rule:#2a2f3b;--tint:#171b24;--ok:#7fd09a;color-scheme:dark}
+html{scroll-padding-top:4.5rem;scroll-behavior:smooth}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Times New Roman",Times,serif;font-size:19px;line-height:1.6}
-main{max-width:760px;margin:0 auto;padding:3.5rem 1.4rem 4rem}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Times New Roman",Times,serif;font-size:19px;line-height:1.65}
+.wrap{max-width:780px;margin:0 auto;padding:0 1.4rem}
 a{color:var(--accent);text-underline-offset:3px}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-h1{font-size:clamp(2.4rem,7vw,3.6rem);line-height:1.05;margin:0 0 .5rem;font-weight:700;letter-spacing:-.01em}
-.role{font-size:1.3rem;margin:0 0 1.2rem;color:var(--muted)}
-.lede{font-size:1.15rem;margin:0 0 1.4rem}
-.links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:0 0 1rem;padding:0;list-style:none}
-h2{font-size:1.6rem;margin:3rem 0 1.2rem;padding-bottom:.4rem;border-bottom:2px solid var(--ink)}
-.proj{margin:0 0 2.4rem}
-.proj h3{font-size:1.5rem;margin:0 0 .2rem}
-.proj .stack{margin:0 0 .7rem;color:var(--muted);font-style:italic}
-.proj p{margin:0 0 .7rem}
-.proj h4{font-size:1.05rem;margin:1rem 0 .2rem}
-.proj ul{margin:.2rem 0 .8rem;padding-left:1.2rem}
-.proj li{margin-bottom:.3rem}
-.res{background:var(--tint);padding:.55rem .8rem;border-left:3px solid var(--accent);font-size:1rem;margin:.6rem 0 .8rem}
-.skills dt{font-weight:700;margin-top:.8rem}
-.skills dd{margin:0;color:var(--muted)}
-footer{margin-top:3.5rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--muted);font-size:1rem}
-@media (max-width:620px){body{font-size:18px}}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--bg);padding:.4rem .7rem;z-index:9}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--rule);font-size:1rem}
+nav ul{display:flex;gap:1.2rem;margin:0;padding:0;list-style:none}
+nav a{color:var(--ink);text-decoration:none;padding-bottom:2px;border-bottom:2px solid transparent}
+nav a:hover,nav a[aria-current="true"]{border-bottom-color:var(--accent)}
+button{font:inherit;color:var(--ink);cursor:pointer}
+#theme{font-size:.95rem;background:none;border:1px solid var(--rule);border-radius:4px;padding:.15rem .6rem}
+.hero{padding:3.5rem 0 2.5rem}
+h1{font-size:clamp(2.6rem,8vw,4.2rem);line-height:1.02;margin:0 0 1rem;font-weight:700;letter-spacing:-.015em}
+.pitch{font-size:clamp(1.35rem,3.4vw,1.7rem);line-height:1.35;margin:0 0 1.2rem;max-width:34ch}
+.sub{color:var(--muted);margin:0 0 1.6rem;max-width:60ch}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-block;padding:.55rem 1.1rem;border:1.5px solid var(--accent);border-radius:4px;text-decoration:none;font-size:1.05rem;background:none;color:var(--accent)}
+.btn:hover{background:var(--tint)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.main:hover{opacity:.9}
+h2{font-size:1.7rem;margin:0 0 1.4rem;padding-bottom:.4rem;border-bottom:2px solid var(--ink)}
+section{padding:2.2rem 0}
+.proj{border:1px solid var(--rule);border-radius:6px;padding:1.6rem 1.5rem;margin:0 0 1.8rem}
+.proj header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.4rem 1rem}
+.proj h3{font-size:1.6rem;margin:0;line-height:1.2}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0 1rem;padding:0;list-style:none}
+.chips li{background:var(--tint);border:1px solid var(--rule);border-radius:99px;padding:.05rem .75rem;font-size:.92rem}
+.proj h4{font-size:1.1rem;margin:1.3rem 0 .3rem}
+.proj p{margin:0 0 .6rem}
+.demo{background:var(--tint);border:1px solid var(--rule);border-radius:6px;padding:1rem 1.1rem;margin:.6rem 0 1rem}
+.demo .q{display:flex;flex-wrap:wrap;gap:.5rem;margin:.4rem 0 1rem}
+.demo .q button{background:var(--bg);border:1.5px solid var(--rule);border-radius:4px;padding:.3rem .8rem;font-size:1rem}
+.demo .q button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:var(--accent-ink)}
+.note{font-size:.9rem;color:var(--muted);margin:.6rem 0 0}
+.flow{list-style:none;counter-reset:s;margin:0;padding:0 0 0 1.6rem;border-left:2px solid var(--rule)}
+.flow li{counter-increment:s;position:relative;margin:0 0 .7rem;padding-left:.4rem;opacity:.45;transition:opacity .3s}
+.flow li::before{content:counter(s);position:absolute;left:-2.35rem;top:.1rem;width:1.45rem;height:1.45rem;border-radius:50%;background:var(--muted);color:var(--bg);font-size:.82rem;line-height:1.45rem;text-align:center}
+.flow li.on{opacity:1}.flow li.on::before{background:var(--accent);color:var(--accent-ink)}
+.flow li.skip{opacity:.4;font-style:italic}
+.flow .out{display:block;color:var(--muted);font-size:.98rem}
+.flow li.on .out{color:var(--ink)}
+.guard{margin:.3rem 0 .8rem;padding-left:1.2rem}.guard li{margin-bottom:.35rem}
+.skills{display:grid;grid-template-columns:11rem 1fr;gap:.5rem 1.2rem;margin:0}
+.skills dt{font-weight:700}.skills dd{margin:0;color:var(--muted)}
+.contact p{margin:0 0 1rem;max-width:56ch}
+#copy{border:1.5px solid var(--rule);border-radius:4px;background:none;padding:.5rem 1rem;font-size:1.05rem}
+footer{padding:1.5rem 0 3rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.95rem}
+@media (max-width:620px){body{font-size:18px}.skills{grid-template-columns:1fr;gap:0}.skills dd{margin-bottom:.7rem}nav ul{gap:.8rem}nav strong{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.flow li{transition:none}}
 </style>
 </head>
 <body>
-<main>
-<header>
-<h1>Mohini Satarupa Jena</h1>
-<p class="role">ML Engineer building GenAI and voice AI applications</p>
-<p class="lede">I build retrieval-grounded LLM agents that answer from evidence and hand off to a human when they cannot. These are my open-source projects.</p>
-<ul class="links">
-<li><a href="https://github.com/YOUR-GITHUB-USERNAME">GitHub</a></li>
-<li><a href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID">LinkedIn</a></li>
-<li><a href="mailto:mohinisatarupajena@gmail.com">mohinisatarupajena@gmail.com</a></li>
-<li>Delhi, India</li>
+<a class="skip" href="#projects">Skip to projects</a>
+<div class="wrap">
+<nav aria-label="Main">
+<strong>Mohini Satarupa Jena</strong>
+<ul>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#stack">Stack</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="mohini_jena_CV_2026.pdf" target="_blank" rel="noopener">Resume</a></li>
 </ul>
+<button id="theme" type="button" aria-label="Switch between light and dark theme">Theme</button>
+</nav>
+
+<header class="hero">
+<h1>I build GenAI agents that answer from evidence.</h1>
+<p class="pitch">ML Engineer working on retrieval-grounded LLMs, tool calling and multilingual voice AI.</p>
+<p class="sub">My agents look up the facts before they speak, call verified tools instead of guessing, and hand over to a person when they should. Try the walkthrough in the first project below.</p>
+<div class="btns">
+<a class="btn main" href="https://github.com/saythename1725">See my GitHub</a>
+<a class="btn" href="mohini_jena_CV_2026.pdf" target="_blank" rel="noopener">View resume (PDF)</a>
+<a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID">LinkedIn</a>
+</div>
 </header>
 
-<section aria-labelledby="work">
-<h2 id="work">Projects</h2>
+<main>
+<section id="projects" aria-labelledby="ph">
+<h2 id="ph">Projects</h2>
 
-<!-- COPY THIS WHOLE <article> BLOCK TO ADD A NEW PROJECT -->
+<!-- ADD A PROJECT: copy this whole <article> block, paste it below, then edit the text and links -->
 <article class="proj">
+<header>
 <h3>Multilingual VoiceOps Support Agent</h3>
-<p class="stack">RAG, generative AI, speech recognition, LLM tool calling, Gnani speech-to-text and text-to-speech</p>
-<p>A voice support agent that talks with customers in several languages and resolves their issues using company policy. It retrieves the relevant policy first and answers only from that evidence, so replies stay accurate and auditable.</p>
-<h4>What it does</h4>
-<ul>
-<li>Transcribes the caller’s speech and replies by voice in their language.</li>
-<li>Retrieves policy passages and writes evidence-grounded answers.</li>
-<li>Looks up verified order details through LLM tool calling.</li>
-<li>Escalates to a support ticket when the issue needs a human.</li>
+<a class="btn" href="https://github.com/saythename1725/YOUR-REPO">View on GitHub</a>
+</header>
+<ul class="chips" aria-label="Technologies">
+<li>RAG</li><li>LLM tool calling</li><li>Speech-to-text</li><li>Text-to-speech</li><li>Gnani</li><li>Python</li>
 </ul>
-<p class="res">Design focus: grounded answers over free-form generation, verified data over guesses, and a safe handoff to people.</p>
-<a href="https://github.com/YOUR-GITHUB-USERNAME/YOUR-REPO">View on GitHub</a>
-</article>
-<!-- END OF PROJECT BLOCK -->
 
+<h4>The problem</h4>
+<p>Support teams answer the same policy questions in many languages, and a voice bot that improvises can quote the wrong refund rule or the wrong order. I built an agent that talks with customers by voice and only says what it can back up.</p>
+
+<h4>Try it: pick a caller question</h4>
+<div class="demo">
+<div class="q" role="group" aria-label="Sample caller questions">
+<button type="button" data-s="0" aria-pressed="true">Return policy question</button>
+<button type="button" data-s="1" aria-pressed="false">Where is my order?</button>
+<button type="button" data-s="2" aria-pressed="false">Complex complaint</button>
+</div>
+<ol class="flow" id="flow" aria-live="polite"></ol>
+<p class="note">An illustrative walkthrough of the agent’s logic with sample text. It is not a live call.</p>
+</div>
+
+<h4>Design decisions</h4>
+<ul class="guard">
+<li>Evidence-grounded answers, so every reply traces back to a policy source.</li>
+<li>Tool calls for order data, so the agent never invents order details.</li>
+<li>Ticket escalation as a first-class path, so a hard case ends with a person, not a bad guess.</li>
+</ul>
+</article>
 </section>
 
-<section aria-labelledby="skills">
-<h2 id="skills">Tools I build with</h2>
+<section id="stack" aria-labelledby="sh">
+<h2 id="sh">Stack</h2>
 <dl class="skills">
 <dt>LLM and agents</dt><dd>RAG, LangChain, LangGraph, tool calling, multi-agent orchestration, prompt engineering</dd>
 <dt>Machine learning</dt><dd>XGBoost, LightGBM, scikit-learn, TensorFlow, Keras</dd>
@@ -80,9 +139,60 @@ footer{margin-top:3.5rem;padding-top:1rem;border-top:1px solid var(--rule);color
 </dl>
 </section>
 
-<footer>
-<p>Open to ML Engineer and GenAI roles. Write to <a href="mailto:mohinisatarupajena@gmail.com">mohinisatarupajena@gmail.com</a>.</p>
-</footer>
+<section id="contact" class="contact" aria-labelledby="ch">
+<h2 id="ch">Contact</h2>
+<p>I am open to ML Engineer and GenAI roles. The fastest way to reach me is email, and my code is on GitHub.</p>
+<div class="btns">
+<a class="btn main" href="mailto:mohinisatarupajena@gmail.com">Email me</a>
+<button id="copy" type="button">Copy email address</button>
+<a class="btn" href="mohini_jena_CV_2026.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+<a class="btn" href="https://github.com/saythename1725">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID">LinkedIn</a>
+</div>
+</section>
 </main>
+
+<footer>Mohini Satarupa Jena, Delhi, India</footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,tb=document.getElementById('theme');
+try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s)}catch(e){}
+tb.addEventListener('click',function(){
+var cur=r.getAttribute('data-theme'),dark=cur?cur==='dark':matchMedia('(prefers-color-scheme:dark)').matches,n=dark?'light':'dark';
+r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}});
+
+var cp=document.getElementById('copy');
+cp.addEventListener('click',function(){
+var t='mohinisatarupajena@gmail.com',done=function(m){cp.textContent=m;setTimeout(function(){cp.textContent='Copy email address'},1800)};
+try{navigator.clipboard.writeText(t).then(function(){done('Copied')},function(){done(t)})}catch(e){done(t)}});
+
+var names=['Listen','Retrieve','Verify','Answer','Escalate'];
+var S=[
+[['Caller says: “What is your return policy?”'],['Finds the returns section of the policy'],null,['Replies by voice, using the retrieved policy text'],null],
+[['Caller says: “Where is my order?”'],['Finds the order tracking policy'],['Calls lookup_order and gets the verified status'],['Replies with the status from the verified record'],null],
+[['Caller describes a complaint outside policy'],['Finds no policy that covers it'],null,['Says it will pass the case to a person'],['Opens a support ticket with the call summary']]
+];
+var flow=document.getElementById('flow'),btns=document.querySelectorAll('.demo .q button'),timers=[];
+var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function show(i){
+timers.forEach(clearTimeout);timers=[];flow.innerHTML='';
+btns.forEach(function(b,k){b.setAttribute('aria-pressed',k===i?'true':'false')});
+S[i].forEach(function(st,k){
+var li=document.createElement('li'),b=document.createElement('b'),o=document.createElement('span');
+b.textContent=names[k]+'. ';o.className='out';
+if(st){o.textContent=st[0]}else{o.textContent='Not needed for this question.';li.className='skip'}
+li.appendChild(b);li.appendChild(o);flow.appendChild(li);
+if(st){var f=function(){li.classList.add('on')};reduce?f():timers.push(setTimeout(f,350*(k+1)))}
+});}
+btns.forEach(function(b){b.addEventListener('click',function(){show(+b.dataset.s)})});
+show(0);
+
+var links=document.querySelectorAll('nav a[href^="#"]');
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.setAttribute('aria-current',a.getAttribute('href')==='#'+e.target.id?'true':'false')})}})},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('main section').forEach(function(s){io.observe(s)});}
+})();
+</script>
 </body>
 </html>
