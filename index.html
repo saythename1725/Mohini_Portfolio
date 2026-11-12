@@ -71,7 +71,7 @@
 }
 
 html { scroll-padding-top: 5rem; scroll-behavior: smooth; }
-* { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-size: 17px; line-height: 1.65; transition: background 0.2s, color 0.2s; }
 .wrap { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
 a { color: var(--accent); text-underline-offset: 3px; text-decoration: none; }
@@ -81,7 +81,7 @@ a:hover { text-decoration: underline; }
 .skip { position: absolute; left: -999px; }
 .skip:focus { left: 1rem; top: 1rem; background: var(--panel); color: var(--ink); padding: .5rem 1rem; z-index: 99; border: 1px solid var(--panel-border); }
 
-nav { position: sticky; top: 0; z-index: 10; background: rgba(13, 17, 23, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; justify-space-between: space-between; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+nav { position: sticky; top: 0; z-index: 10; background: rgba(13, 17, 23, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); }
 [data-theme="light"] nav { background: rgba(246, 248, 250, 0.85); }
 nav .brand { font-weight: 700; font-size: 1.1rem; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: .5rem; }
 nav ul { display: flex; gap: 1.2rem; margin: 0; padding: 0; list-style: none; align-items: center; }
@@ -95,11 +95,6 @@ nav a:hover, nav a[aria-current="true"] { color: var(--ink); }
 h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); line-height: 1.1; margin: 0 0 1rem; font-weight: 800; letter-spacing: -.02em; }
 .pitch { font-size: clamp(1.2rem, 2.8vw, 1.45rem); line-height: 1.4; color: var(--ink); margin: 0 0 1.2rem; max-width: 42ch; font-weight: 500; }
 .sub { color: var(--muted); margin: 0 0 1.8rem; max-width: 62ch; font-size: 1.05rem; }
-
-.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem; margin: 2rem 0; }
-.metric-card { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 8px; padding: 1rem 1.2rem; text-align: left; }
-.metric-num { font-size: 1.8rem; font-weight: 800; color: var(--accent); line-height: 1.1; margin-bottom: .2rem; }
-.metric-label { font-size: .85rem; color: var(--muted); font-weight: 500; line-height: 1.3; }
 
 .btns { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .65rem 1.2rem; border: 1px solid var(--panel-border); border-radius: 6px; text-decoration: none; font-size: .95rem; font-weight: 600; background: var(--panel); color: var(--ink); transition: all 0.2s; }
@@ -140,15 +135,11 @@ h2::before { content: ""; display: inline-block; width: 4px; height: 1.3rem; bac
 .edu-card h3 { font-size: 1.1rem; margin: 0 0 .2rem; font-weight: 700; color: var(--ink); }
 .edu-card p { margin: 0; font-size: .92rem; color: var(--muted); }
 
-.contact-card { background: var(--panel); border: 1px solid var(--panel-border); border-radius: 8px; padding: 2rem; text-align: center; }
-.contact-card p { max-width: 48ch; margin: 0 auto 1.5rem; color: var(--muted); }
-
 footer { padding: 2rem 0 3rem; text-align: center; color: var(--muted); font-size: .9rem; border-top: 1px solid var(--rule); margin-top: 2rem; }
 
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .hero { padding: 2rem 0 1.5rem; }
-  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
   .exp-header { flex-direction: column; align-items: flex-start; }
 }
 </style>
@@ -163,14 +154,14 @@ footer { padding: 2rem 0 3rem; text-align: center; color: var(--muted); font-siz
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#stack">Stack</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#education">Education</a></li>
     </ul>
     <button id="theme" type="button" aria-label="Toggle theme">Theme</button>
   </nav>
 
   <header class="hero">
     <div class="badge-label">3+ Yrs Machine Learning Experience</div>
-    <h2>Building Production ML Systems & Evidence-Grounded GenAI Agents.</h2>
+    <h1>Building Production ML Systems & Evidence-Grounded GenAI Agents.</h1>
     <p class="sub">Core contributor at Paisabazaar Credit Card team (1.6M+ monthly users across 10+ partner banks) and former ML Engineer at LenDenClub. Specialized in low-latency risk pipelines, feature stores, and grounded LLM architectures.</p>
 
     <div class="btns">
@@ -188,10 +179,9 @@ footer { padding: 2rem 0 3rem; text-align: center; color: var(--muted); font-siz
         <p><strong>From Mathematical Foundations to Automated Decisioning:</strong> My journey started with an M.Sc. in Mathematics from <strong>IIT Ropar</strong>, which gave me a first-principles approach to breaking down complex systems. In fintech, I applied that rigor to transforming manual lending workflows into fully automated, real-time risk pipelines—building robust feature stores and scalable underwriting models that make split-second, hands-off decisions on millions of applications.</p>
         <p><strong>Reliable AI for Hands-Off Operations:</strong> Today at <strong>Paisabazaar</strong>, I combine classical predictive modeling with production-grade Generative AI to scale business operations safely. Moving beyond human intervention means systems have to be entirely dependable. Whether building propensity models or deploying LLM assistants, my focus is on designing architectures anchored in strict evidence retrieval and deterministic tool calling, ensuring automated workflows run on verified facts, clear citations, and reliable fallback paths without risking user trust or business integrity.</p>
       </div>
-      </div>
     </section>
 
-    <!-- <section id="experience">
+    <section id="experience">
       <h2>Work Experience</h2>
 
       <article class="exp-card">
@@ -235,7 +225,7 @@ footer { padding: 2rem 0 3rem; text-align: center; color: var(--muted); font-siz
           <li><strong>Model Drift Architecture:</strong> Implemented real-time model monitoring using OpenSearch and SQL, cutting Mean Time to Resolution (MTTR) by 30%.</li>
         </ul>
       </article>
-    </section> -->
+    </section>
 
     <section id="projects">
       <h2>Featured Open-Source & GenAI Projects</h2>
@@ -317,18 +307,6 @@ footer { padding: 2rem 0 3rem; text-align: center; color: var(--muted); font-siz
     var n = dark ? 'light' : 'dark';
     r.setAttribute('data-theme', n);
     try { localStorage.setItem('theme', n); } catch(e){}
-  });
-
-  var cp = document.getElementById('copy');
-  cp.addEventListener('click', function(){
-    var t = 'mohinisatarupajena@gmail.com';
-    var done = function(m){
-      cp.textContent = m;
-      setTimeout(function(){ cp.textContent = 'Copy Email Address'; }, 1800);
-    };
-    try {
-      navigator.clipboard.writeText(t).then(function(){ done('Copied to Clipboard!'); }, function(){ done(t); });
-    } catch(e) { done(t); }
   });
 
   var links = document.querySelectorAll('nav a[href^="#"]');
