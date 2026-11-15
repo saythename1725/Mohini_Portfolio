@@ -242,7 +242,68 @@ footer { padding: 2rem 0 3rem; text-align: center; color: var(--muted); font-siz
 
     <section id="projects">
       <h2>Selected Projects</h2><p class="project-intro">A closer look at the systems I build independently — including the problem, design choices and how I evaluate whether they work.</p>
+<article class="proj">
+  <div class="exp-header">
+    <h3 class="exp-title">LLM Evaluation & Regression Pipeline</h3>
+    <a class="btn" href="https://github.com/saythename1725/llm-eval-pipeline" target="_blank" rel="noopener">
+      GitHub Repository
+    </a>
+  </div>
 
+  <ul class="chips">
+    <li>Python</li>
+    <li>LLM Evaluation</li>
+    <li>RAG</li>
+    <li>Ollama</li>
+    <li>ChromaDB</li>
+    <li>Pytest</li>
+    <li>GitHub Actions</li>
+  </ul>
+
+  <p>
+    An evaluation pipeline built from scratch to understand how retrieval-augmented
+    generation systems can be measured, tested and monitored instead of relying
+    directly on pre-built evaluation frameworks.
+  </p>
+
+  <ul class="feat">
+    <li>
+      <strong>Retrieval evaluation:</strong>
+      Measures Precision@K, hit rate and Mean Reciprocal Rank for retrieved policy documents.
+    </li>
+    <li>
+      <strong>Answer evaluation:</strong>
+      Uses a local LLM judge to evaluate whether generated answers match the expected answers.
+    </li>
+    <li>
+      <strong>Faithfulness evaluation:</strong>
+      Checks whether factual claims in generated answers are supported by the retrieved context.
+    </li>
+    <li>
+      <strong>Abstention evaluation:</strong>
+      Measures whether the system correctly answers or abstains when information is unavailable.
+    </li>
+    <li>
+      <strong>Regression testing:</strong>
+      Compares evaluation results against a baseline and detects quality or latency regressions.
+    </li>
+    <li>
+      <strong>Reporting and automation:</strong>
+      Generates JSON and HTML reports and runs the evaluation workflow through GitHub Actions.
+    </li>
+  </ul>
+
+  <p class="project-outcome">
+    Focus: understanding evaluation fundamentals from first principles before using
+    frameworks such as DeepEval or Ragas.
+  </p>
+
+  <div class="btns">
+    <a class="btn main" href="YOUR_GITHUB_REPOSITORY_URL" target="_blank" rel="noopener">
+      Explore source code ↗
+    </a>
+  </div>
+</article>
       <article class="proj">
         <div class="exp-header">
           <h3 class="exp-title">Multilingual VoiceOps Support Agent</h3>
